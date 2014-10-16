@@ -1,6 +1,4 @@
-#!/bin/bash
-
-s=`cat .tmp-start`
+s=`cat /tmp/sh/start`
 e=`history 1 | cut -d ' ' -f 2`
 f=$((e - s))
 touch .result-recording

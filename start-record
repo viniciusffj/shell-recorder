@@ -1,5 +1,7 @@
-#!/bin/bash
+if [ ! -d "/tmp/sh" ]; then
+  mkdir /tmp/sh
+fi
 
-touch .tmp-start
+touch /tmp/sh/start
 s=`history 1 | cut -d ' ' -f 2`
-echo $s > .tmp-start
+echo $s > /tmp/sh/start
