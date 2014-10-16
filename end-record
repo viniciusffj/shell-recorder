@@ -1,5 +1,9 @@
+if [ ! -d "~/.sr" ]; then
+  mkdir ~/.sr
+fi
+
 s=`cat /tmp/sh/start`
 e=`history 1 | cut -d ' ' -f 2`
 f=$((e - s))
-touch .result-recording
-history $f | head --lines=-1 | cut -d ' ' -f 4- > .result-recording
+touch ~/.sr/result-recording
+history $f | head --lines=-1 | cut -d ' ' -f 4- > ~/.sr/result-recording
