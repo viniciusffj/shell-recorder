@@ -1,9 +1,18 @@
-if [ ! -d "~/.sr" ]; then
-  mkdir ~/.sr
+output=~/.sr/result-recording
+
+if [ -z "$1" ]; then
+	if [ ! -d ~/.sr ]; then
+		echo criou
+		mkdir ~/.sr
+	fi
+else
+	output=$1
 fi
+
+echo Writing output to $output
 
 s=`cat /tmp/sh/start`
 e=`history 1 | cut -d ' ' -f 2`
 f=$((e - s))
-touch ~/.sr/result-recording
-history $f | head --lines=-1 | cut -d ' ' -f 4- > ~/.sr/result-recording
+touch $output 
+history $f | head --lines=-1 | cut -d ' ' -f 4- > $output
