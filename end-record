@@ -1,3 +1,5 @@
+#!/bin/bash
+
 s=`cat .tmp-start`
 e=`history 1 | cut -d ' ' -f 2`
 f=$((e - s))

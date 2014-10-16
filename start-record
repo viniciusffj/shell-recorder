@@ -1,3 +1,5 @@
+#!/bin/bash
+
 touch .tmp-start
 s=`history 1 | cut -d ' ' -f 2`
 echo $s > .tmp-start
