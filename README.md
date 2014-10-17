@@ -20,8 +20,8 @@ shell recorder is simple to use:
 For example:
 
 ```
-$. start-record
-$ls
+$ . start-record
+$ ls
 $ git status
 $ git diff .
 $ . end-record script
